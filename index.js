@@ -23,7 +23,7 @@ const userData={
 
 if (!validateUserData(userData)){
     const errorMessage=document.createElement('p');
-    errorMessage.textConstant='value must be 09/11/1967 or later';
+    errorMessage.textContentt='value must be 09/11/1967 or later';
     errorMessage.classList.add('error-message');
 
 
@@ -44,7 +44,7 @@ function validateUserData(userData){
     const today = new Date();
     const birthDate = new Date(userData.dob);
     const age = today.getFullYear() - birthDate.getFullYear();
-    if (age<minAge||age>maxAge){
+    if (age<minAge || age>maxAge){
         return false;
     }
     return true;
@@ -61,13 +61,13 @@ function saveUserData(userData){
 
 function updateUserDataTable()
 {
-    userDataTableBody.innerHTML = " ";
+    userDataTableBody.innerHTML = '';
     const userList=JSON.parse(localStorage.getItem('userList')) || [];
     userList.forEach((userData) => {
         const userDataRow=createUserDataTableRow(userData);
         userDataTableBody.appendChild(userDataRow);
     });
-    if(userList.length>0){
+    if(userList.length > 0){
         userDataTable.classList.remove('hidden');
     }else{
         userDataTable.classList.add('hidden');
@@ -91,4 +91,6 @@ function clearForm() {
     registrationForm.reset();
 }
 
+
+  
 

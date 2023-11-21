@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Registration-form</h1>
+        <h1>Registration form</h1>
         <form id=">Registration-form" action="#">
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -27,12 +26,12 @@
             <div class="form-group">
                 <label for="dob">Date of Birth::</label>
                 <input type="date" id="dob" name="dob" required>
-                <p id="doberror" class="error-message"></p>
+                <p id="dobError" class="error-message"></p>
             </div>
             <div class="form-group">
-                <label for="terms" class="check-label">
+                <label for="terms" class="checkbox-label">
                 <input type="checkbox" id="terms" name="terms" required>
-                <span class="chechbox-text">I agree to the terms and conditions.</span>
+                <span class="checkbox-text">I agree to the terms and conditions.</span>
                 </label>
             </div>
             <div class="button-disp">
@@ -49,9 +48,11 @@
                         <th>Email</th>
                         <th>Password</th>
                         <th>Dob</th>
+                        <th>Accepted terms?</th>
 
                     </tr>
                 </thread>
+                <tbody></tbody>
             </table>
         </div>
             <script src="index.js"></script>
